@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link href="/webjars/bootstrap/3.4.0/css/bootstrap.min.css"
+          rel="stylesheet" />
+    <link rel="stylesheet" href="/webjars/bootstrap-fileinput/4.5.2/css/fileinput.min.css" />
+
+    <script src="/webjars/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/webjars/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="/webjars/bootstrap-fileinput/4.5.2/js/fileinput.min.js"></script>
+    <script src="/js/index.js"></script>
+    <meta charset="utf-8"/>
+</head>
+<body>
+<div class="container-fluid">
+    <form id="form" th:action="@{/addPic}" method="post" enctype="multipart/form-data">
+        <div class="row form-group">
+            <label class="col-md-4">图片上传:</label>
+            <div class="col-sm-12">
+                <select id="targetDir" name="targetDir" data-show-caption="true">
+                    <option value="zpr">纸片人</option>
+                    <option value="sd">沙雕图</option>
+                </select>
+                <input id="input-id" name="file" multiple type="file" data-show-caption="true" />
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>
